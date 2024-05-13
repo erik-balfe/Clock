@@ -34,11 +34,12 @@
   function calculateOpacity(index, total) {
     return (index / (total - 1)) * 1;
   }
+  export const prerender = true;
 </script>
 
 <div class="container">
   <svg viewBox="-50 -50 100 100" width="300" height="300" class="container">
-    <circle cx="0" cy="0" r="48" fill="none" stroke="black" />
+    <circle cx="0" cy="0" r="48" fill="none" stroke="black" />  
     {#each Array(12) as _, i}
       <line x1="0" y1="-45" x2="0" y2="-48" stroke="black" transform="rotate({i * 30})" />
     {/each}
